@@ -1,0 +1,195 @@
+\documentclass[spanish,a4paper,10pt]{article}
+
+\usepackage{latexsym,amsfonts,amssymb,amstext,amsthm,float,amsmath}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[dvips]{epsfig}
+\usepackage{doc}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%123456789012345678901234567890123456789012345678901234567890123456789
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\textheight 29cm
+%\textwidth 15cm
+%\topmargin -4cm
+%\oddsidemargin 5mm
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\begin{center}
+\includegraphics[width=0.2\textwidth]{imagenes/logotipo-secundario-ULL.png}\\[0.25cm]
+\end{center}
+
+\title{\fbox{\fbox{{\bf Informe sobre $\pi$ usando \LaTeX{}}}}}
+\author{Iciar González Alonso \\ Primer curso del Grado de Matemáticas en la ULL \\ Práctica de Laboratorio \#10}
+\date{11 de abril de 2014}
+
+\maketitle
+
+\begin{abstract}
+El objetivo de esta práctica es entregar un artículo escrito en \LaTeX{} que verse sobre el número $\pi$.
+Con este ejercicio de laboratorio se pretende sintetizar las habilidades adquiridas en la comunicación escrita.
+Para ello, trataremos varios puntos tanto técnicos como prácticos sobre este número.
+\end{abstract}
+
+\pagebreak
+
+%\thispagestyle{empty}
+%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+\section{Definición}
+
+$\pi$ es la relación entre la longitud de una circunferencia y su diámetro, en ggeometría euclidiana. Es un número irracional y una de las constantes matemáticas más importantes. 
+El valor numérico del número $\pi$, expresado con sus primeras cincuenta cifras decimales es el siguiente: 
+\begin{center}
+$\pi$ ~ 3.14159265358979311599796346854418516159057617187500
+\end{center}
+
+El valor de $\pi$ se ha obtenido con diversas aproximaciones a lo largo de la historia. Junto con el número e, es una de las constantes matemáticas más utilizadas. Más adelante estudiaremos algunas formas para calcularlo de forma aproximada.
+
+\subsection{Notación}
+
+La notación con la letra griega $\pi$ proviene de las palabras de origen griego "periferia" y "perímetro" de un círculo.
+Esta notación fue utilizada por primera vez por Willian Oughtred (1574-1660) y aunque su uso fue propuesto por el matemático galés Willian Jones (1675-1749) fue el matemático Leonhard Euler con su obra "Introduccion al cálculo infinitesimal", de 1748 quien la popularizó. 
+Anteriormente había sido conocida como "Constante de Arquímedes" y como "constante de Ludolph" (en honor al matemático Ludolph van Ceulen).\cite{URL:HTTP}
+
+\pagebreak
+
+\section{Historia del número $\pi$}
+
+La primera referencia que se conoce actualmente de $\pi$ es aproximadamente del año 1650 a.C. en el Papiro de Ahmes. En este domcumento estaban contenidos numerosos problemas matemáticos básicos, fracciones, cálculo de áreas y volúmenes, ecuaciones, progresiones, trigonometría,... 
+El valor que se le da a $\pi$ es 2**8/3**4 ~ 3,1605
+
+
+Como comentábamos con anterioridad, una de las primeras aproximaciones fue la de Arquímedes, en el año 250 a.C., que calculó que el valor estaba comprendido entre las cifras decimales de 3 10/71 y 1/7 (3,140845 y 3,142857) y empleó en sus estudios el valor 211875/67441 ~ 3,14163.
+
+Fue Leonhard Eurler quien adoptó este símbolo $\pi$, en 1737, y se ha convertido en una notación estándar hasta hoy en día. 
+
+Una vez situados en la época de la informática, uno de los métodos para comprobar la eficacia de las máquinas era utilizarlas para calcular decimales de $\pi$. En el año 1949 una computadora ENIAC fue capaz de calcular 2037 decimales en 70 horas, en 1966 un IBM 7030 llegó a 250.000 cifras decimales en 8 horas y 23 minutos y ya en el siglo XXI, en el año 2004, un superordenador Hitachi estuvo trabajando 500 horas para calcular 1,3511 billones de lugares decimales.
+
+\subsection{Aproximaciones}
+
+Vamos a estudiar con más detenimiento cómo ha ido avanzando el cálculo del número $\pi$ a lo largo de la historia, y sobre todo, el gran paso que ha supuesto para este caso el desarrollo de las computadoras.
+
+\begin{table}[!ht]
+\begin{center}
+\begin{tabular}{|l||c|c|} 
+\hline
+Año & Quién & Tiempo & Número de Decimales \\ \hline
+2000 AC & Egipto & -- & 3,1605 \\ \hline
+550 AC & La Biblia & -- & 3 \\ \hline
+300 AC & Arquímedes & -- & 3,14163 \\ \hline
+200 AC & Ptolomeo & -- & 3,14166 \\ \hline
+500 & Aryabhata & -- & 3,1416 \\ \hline
+1220 & Fibonacci & -- & 3,141818 \\ \hline
+1596 & Ludoph van Ceulen & -- & 35 \\ \hline
+1706 & Machin & -- & 100 \\ \hline
+1853 & William Shanks & -- & 527 \\ \hline
+1855 & Richter & -- & 500 \\ \hline
+1947 & Ferguson & -- & 808 \\ \hline
+1949 & ENAC & 70 horas & 2037 \\ \hline
+1955 & NORC & 13 minutos & 3089 \\ \hline
+1959 & IBM 704 & -- & 16167 \\ \hline
+1961 & IBM 7090 & 8,72 horas & 100200 \\ \hline
+1966 & IBM 7030 & -- & 250 \\ \hline
+1967 & CDC 6600 & -- & 500 \\ \hline
+1973 & CDC 7600 & 23,3 horas & 1000000 \\ \hline
+1983 & HITAC M-28OH & 30 horas & 16000000 \\ \hline
+1987 & Cray-2 (Kanada) & -- & 100000000 \\ \hline
+1988 & Hitachi S-820 & 6 horas & 201326000 \\ \hline
+1995 & Universidad de Tokio & -- & 4294960000 \\ \hline
+1998 & Hitachi SR2201 & 29 horas & 51500000000 \\ \hline
+\end{tabular}
+\end{center}
+\caption{Mi primer cuadro de datos}
+\label{tab}
+\end{table}
+
+\subsection{Cálculo del número $\pi$}
+
+Ya hemos visto algunas de las aproximaciones que se han realizado a lo largo de la historia, pero, ¿cómo han hecho los cálculos?
+
+Desde el Antiguo Egipto hasta la Matemática china, india o islámica, pasando por Mesopotamia e incluso referencias bíblicas, las aproximaciones de este número eran bastante rudimentarias. 
+A partir del siglo XII y fundamentalmente durante el Renacimiento Europeo y la Época moderna (pre-computacional) estos cálculos se fueron mejorando.
+Pero no fue hasta la llegada de los computadores cuando se consiguió calcular un número impensable en siglos pasados de cifras decimales, y a partir del siglo XX su precisión ha ido en aumento, así como va disminuyendo el tiempo que tarda el ordenador en calcular estos decimales.
+
+Nosotros hemos visto una manera de calcular el número $\pi$ de forma aproximada en función del número de intervalos que introduzcamos: 
+
+$$\int_{0}^{1} \! \frac{4}{1+x^2}\, dx = 4(atan(1) -atan(0)) = \pi $$
+
+Esta integral se puede aproximar numéricamente con una fórmula de cuadratura.
+%
+Si se utiliza la regla del punto medio se obtiene:
+
+\begin{center}
+$ \pi \approx \frac{1}{n} \sum\limits_{i=1}^{n}f(x_i)\,$,
+con $f(x) = \frac{4}{(1+x^2)}\,$,
+$x_i = \frac{i - \frac{1}{2}}{n}$,
+para $i = 1, \dots, n$
+\end{center}
+
+%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+\section{Más sobre el número $\pi$}
+
+A continuación, veremos algunas características de este número.
+
+\subsection{Características matemáticas}
+
+\begin{enumerate}
+  \item
+    Se trata de un número irracional, lo que significa que no puede expresarse como fracción de dos números enteros, como demostró Johann Heinrich Lambert en 1761 (o 1767). 
+    
+   \item
+    También es un número trascendente, es decir, que no es la raíz de ningún polinomio de coeficientes enteros. En el siglo XIX el matemático alemán Ferdinand Lindemann demostró este hecho, cerrando con ello definitivamente la permanente y ardua investigación acerca del problema de la cuadratura del círculo indicando que no tiene solución.
+
+   \item
+    Además, se sabe que $\pi$ tampoco es un número de Liouville (Mahler,16 1953), es decir, no sólo es trascendental sino que no puede ser aproximado por una secuencia de racionales "rápidamente convergente" (Stoneham 1970[cita requerida]).
+\end{enumerate}
+
+\subsection{Datos curiosos}
+
+\begin{enumerate}
+   \item
+    El día 22 de julio (22/7) es el día dedicado a la aproximación de $\pi$. (22/7 = 3,1428)
+   \item
+    El 14 de marzo (3/14 en formato de fecha de Estados Unidos) se marca también como el día pi en el que los fans de este número lo celebran con diferentes actuaciones. Curiosamente es el cumpleaños de Einstein.
+   \item 
+    355/113 (~3.1415929) se menciona a veces como un acercamiento a $\pi$ ¡casi-perfecto!
+   \item
+    John Squire (de la banda The Stone Roses) menciona $\pi$ en una canción escrita para su segunda banda The Seahorses denominada "Something Tells Me". La canción acaba con una letra como: "What's the secret of life? It's 3.14159265, yeah yeah!!".
+   \item 
+    La numeración de las versiones del programa de tratamiento de texto TeX de Donald Knuth se realiza según los dígitos de $\pi$. La versión del año 2002 se etiquetó con 3.141592
+   \item
+    Se emplea este número en la serie de señales enviadas por la tierra con el objeto de ser identificados por una civilización inteligente extraterrestre.
+   \item
+    La probabilidad de que dos enteros positivos escogidos al azar sean primos entre si es 6 / $\pi$2
+   \item
+    Existen programas en internet que buscan tu número de teléfono en las 50.000.000 primeras cifras de $\pi$
+   \item 
+    En el año 2002 el japonés Akira Haraguchi rompió el record mundial recitando durante 13 horas 83.431 dígitos del número pi sin parar, doblando el anterior record en posesión del también japonés Hiroyuki Goto. El 4 de octubre de 2006, a la 1:30 de la madrugada, y tras 16 horas y media, Haraguchi volvió a romper su propio record recitando 100.000 dígitos del número pi, realizando una parada cada dos horas de 10 minutos para tomar aire.
+   \item 
+     Existe una canción de Kate Bush llamada "Pi" en la cual se recitan más de veinte dígitos decimales del número.
+   \item 
+     En Argentina, el número telefónico móvil para emergencias en estaciones de trenes y subterráneos es el número Pi: 3,1416.
+   \item 
+     En la página web thinkgeek.com pueden comprarse camisetas y accesorios con $\pi$. En el enlace se puede ver una camiseta en la que se construye la letra $\pi$ con sus primeros 4493 digitos.
+   \item 
+     Existe un vehículo Mazda 3 modificado, al que se le añadieron 27 cifras de $\pi$, después del 3.
+ \cite{URL:XML}
+   
+ \end{enumerate}
+
+
+
+
+%\begin{thebibliography}{1}
+%\bibitem{python} Tutorial de Python. http://docs.python.org/2/tutorial/
+%\end{thebibliography}
+\bibliographystyle{plain}
+
+
+\bibliography{practica10}
+\nocite{*}
+\end{document}
