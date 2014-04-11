@@ -19,9 +19,13 @@
 
 \begin{document}
 
+\begin{figure}[!th]
 \begin{center}
-\includegraphics[width=0.2\textwidth]{imagenes/logotipo-secundario-ULL.png}\\[0.25cm]
+\includegraphics[width=0.75\textwidth]{imagenes/imagen1.eps}
+\caption{Logo ULL}
+\label{fig:1}
 \end{center}
+\end{figure}
 
 \title{\fbox{\fbox{{\bf Informe sobre $\pi$ usando \LaTeX{}}}}}
 \author{Iciar González Alonso \\ Primer curso del Grado de Matemáticas en la ULL \\ Práctica de Laboratorio \#10}
@@ -37,7 +41,7 @@ Para ello, trataremos varios puntos tanto técnicos como prácticos sobre este n
 
 \pagebreak
 
-%\thispagestyle{empty}
+\thispagestyle{empty}
 %++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 \section{Definición}
 
@@ -52,11 +56,10 @@ El valor de $\pi$ se ha obtenido con diversas aproximaciones a lo largo de la hi
 \subsection{Notación}
 
 La notación con la letra griega $\pi$ proviene de las palabras de origen griego "periferia" y "perímetro" de un círculo.
-Esta notación fue utilizada por primera vez por Willian Oughtred (1574-1660) y aunque su uso fue propuesto por el matemático galés Willian Jones (1675-1749) fue el matemático Leonhard Euler con su obra "Introduccion al cálculo infinitesimal", de 1748 quien la popularizó. 
+Esta notación fue utilizada por primera vez por Willian Oughtred (1574-1660) y aunque su uso fue propuesto por el matemático galés Willian Jones (1675-1749) fue el matemático Leonhard Euler con su obra "Introduccion al cálculo infinitesimal" \footnote{Esta es la nota al pie}, de 1748 quien la popularizó. 
 Anteriormente había sido conocida como "Constante de Arquímedes" y como "constante de Ludolph" (en honor al matemático Ludolph van Ceulen).\cite{URL:HTTP}
 
 \pagebreak
-
 \section{Historia del número $\pi$}
 
 La primera referencia que se conoce actualmente de $\pi$ es aproximadamente del año 1650 a.C. en el Papiro de Ahmes. En este domcumento estaban contenidos numerosos problemas matemáticos básicos, fracciones, cálculo de áreas y volúmenes, ecuaciones, progresiones, trigonometría,... 
@@ -75,9 +78,9 @@ Vamos a estudiar con más detenimiento cómo ha ido avanzando el cálculo del n�
 
 \begin{table}[!ht]
 \begin{center}
-\begin{tabular}{|l||c|c|} 
+\begin{tabular}{|l||c|c|c|} 
 \hline
-Año & Quién & Tiempo & Número de Decimales \\ \hline
+Año & Quién & Tiempo & Decimales\\ \hline
 2000 AC & Egipto & -- & 3,1605 \\ \hline
 550 AC & La Biblia & -- & 3 \\ \hline
 300 AC & Arquímedes & -- & 3,14163 \\ \hline
@@ -103,7 +106,7 @@ Año & Quién & Tiempo & Número de Decimales \\ \hline
 1998 & Hitachi SR2201 & 29 horas & 51500000000 \\ \hline
 \end{tabular}
 \end{center}
-\caption{Mi primer cuadro de datos}
+\caption{Evolución del cálculo de decimales de $\pi$}
 \label{tab}
 \end{table}
 
@@ -131,6 +134,7 @@ para $i = 1, \dots, n$
 \end{center}
 
 %++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+\pagebreak
 \section{Más sobre el número $\pi$}
 
 A continuación, veremos algunas características de este número.
@@ -190,6 +194,6 @@ A continuación, veremos algunas características de este número.
 \bibliographystyle{plain}
 
 
-\bibliography{practica10}
+\bibliography{bibliografia}
 \nocite{*}
 \end{document}
